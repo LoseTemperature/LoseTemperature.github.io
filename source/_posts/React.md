@@ -10,7 +10,7 @@ categories: [技术分享]
 - JSX语法必须使用一个根标签包裹所有的内容
 - JSX语法中可以混入JS表达式，但是必须使用{}包裹起来
 - JSX语法中可以使用注释，但是必须使用{}包裹起来
-- JSX中class属性需要使用className代替 style属性 style={{key:value}}
+- JSX中class属性需要使用className代替，style属性需要使用对象形式：`style={{key: value}}`
 - JSX中标签必须闭合
 - 组件标签必须是大写字母开头
 
