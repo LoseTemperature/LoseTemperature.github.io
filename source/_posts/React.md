@@ -1,3 +1,9 @@
+---
+title: React 学习
+date: 2025-01-11
+tags: [React, 程序员, 技术]
+categories: [技术分享]
+---
 # React 学习  
 ## jsx
 - JSX语法是一种JS的扩展语法，它可以在JS中直接使用HTML标签，而不需要像原生一样使用html字符串
