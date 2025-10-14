@@ -102,7 +102,9 @@ theme: my-theme
 ## Docs: https://hexo.io/docs/one-command-deployment
 ## Using GitHub Actions for deployment
 deploy:
-  type: ''
+  type: 'git'
+  repo: https://github.com/LoseTemperature/LoseTemperature.github.io.git
+  branch: gh-pages
 
 theme_config:
   dream:
