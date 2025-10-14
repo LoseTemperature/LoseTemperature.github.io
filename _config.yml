@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: blog
-subtitle: ''
-description: 'study notes'
-keywords:
+title: 知行习作间
+subtitle: 选择大于努力，视野决定高度
+description: lose temperature 的技术学习记录
+keywords: lose temperature, 技术博客, 学习笔记
 author: lose temperature
 language: zh-CN
 timezone: ''
@@ -103,3 +103,13 @@ theme: my-theme
 ## Using GitHub Actions for deployment
 deploy:
   type: ''
+
+theme_config:
+  dream:
+    title: 知行与共
+    text: 保持好奇，持续精进，在记录与分享中积累前行的力量。
+  subtitle:
+    sub1: 选择大于努力，视野决定高度
+    sub2: lose temperature · 知行习作间
+  music:
+    enable: false
