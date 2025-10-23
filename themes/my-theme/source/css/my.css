@@ -22,12 +22,16 @@
 
 #articleContent figure.highlight {
     padding: 0;
+    width: 100%;
+    display: block;
 }
 
 #articleContent figure.highlight > table {
     width: 100%;
     margin: 0;
     border-collapse: collapse;
+    table-layout: fixed !important;
+    display: table !important;
 }
 
 #articleContent figure.highlight td {
@@ -37,10 +41,25 @@
     font-family: inherit;
 }
 
+#articleContent figure.highlight { 
+    --gutter-w: 2.4rem;
+}
+
+/* Responsive adjustments for code block gutter width */
+@media (max-width: 768px) {
+    #articleContent figure.highlight { 
+        --gutter-w: 2.0rem; 
+    }
+}
+@media (max-width: 480px) {
+    #articleContent figure.highlight { 
+        --gutter-w: 1.6rem; 
+    }
+}
 #articleContent figure.highlight td.gutter {
-    width: 3rem;
-    padding: 1.25rem 0.75rem;
-    text-align: right;
+    width: var(--gutter-w) !important;
+    padding: 1rem 0.4rem;
+    text-align: center;
     background: rgba(148, 163, 184, 0.18);
     color: #64748b;
     user-select: none;
@@ -48,6 +67,7 @@
 
 #articleContent figure.highlight td.code {
     padding: 1.25rem 1.6rem;
+    width: calc(100% - var(--gutter-w)) !important;
 }
 
 #articleContent pre code,
@@ -96,6 +116,59 @@
 #articleContent pre::-webkit-scrollbar-thumb:hover,
 #articleContent figure.highlight::-webkit-scrollbar-thumb:hover {
     background: rgba(15, 23, 42, 0.33);
+}
+
+/* 仅在行号区域隐藏装饰与功能按钮 */
+#articleContent figure.highlight td.gutter .code-area::after,
+#articleContent figure.highlight td.gutter .code-area .code_copy,
+#articleContent figure.highlight td.gutter .code-area .codecopy_notice,
+#articleContent figure.highlight td.gutter .code-area .code-expand {
+    display: none !important;
+}
+
+#articleContent figure.highlight td.gutter .code_lang {
+    display: none !important;
+}
+
+/* 降低代码区域 pre 的字号 */
+#articleContent figure.highlight td.code pre,
+#articleContent figure.highlight td.code code {
+    font-size: 0.90rem;
+}
+
+#articleContent figure.highlight td.gutter pre,
+#articleContent figure.highlight td.code pre {
+    margin: 0;
+    line-height: 1.65 !important;
+}
+#articleContent figure.highlight td.gutter pre {
+    padding: 2rem 0 1rem 0 !important;
+}
+#articleContent figure.highlight td.code pre {
+    padding-top: 2rem !important;
+}
+
+#articleContent pre::-webkit-scrollbar-thumb:hover,
+#articleContent figure.highlight::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 23, 42, 0.33);
+}
+
+/* 仅在行号区域隐藏装饰与功能按钮 */
+#articleContent figure.highlight td.gutter .code-area::after,
+#articleContent figure.highlight td.gutter .code-area .code_copy,
+#articleContent figure.highlight td.gutter .code-area .codecopy_notice,
+#articleContent figure.highlight td.gutter .code-area .code-expand {
+    display: none !important;
+}
+
+#articleContent figure.highlight td.gutter .code_lang {
+    display: none !important;
+}
+
+/* 降低代码区域 pre 的字号 */
+#articleContent figure.highlight td.code pre,
+#articleContent figure.highlight td.code code {
+    font-size: 0.90rem;
 }
 
 #toc-aside {
