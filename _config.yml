@@ -103,7 +103,7 @@ theme: my-theme
 ## Using GitHub Actions for deployment
 deploy:
   type: 'git'
-  repo: https://github.com/LoseTemperature/LoseTemperature.github.io.git
+  repo: git@github.com:LoseTemperature/LoseTemperature.github.io.git
   branch: gh-pages
 
 theme_config:
