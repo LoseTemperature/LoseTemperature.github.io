@@ -1,0 +1,197 @@
+/* Custom code block and inline code styling */
+
+#articleContent pre,
+#articleContent figure.highlight,
+#articleContent .highlight pre {
+    position: relative;
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #f5f7fb;
+    color: #111827;
+    box-shadow: none;
+    overflow: auto;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', Consolas, 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.68;
+}
+
+#articleContent pre {
+    padding: 1.25rem 1.6rem;
+}
+
+#articleContent figure.highlight {
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+#articleContent figure.highlight > table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    table-layout: fixed !important;
+    display: table !important;
+}
+
+#articleContent figure.highlight td {
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+}
+
+#articleContent figure.highlight { 
+    --gutter-w: 2.4rem;
+}
+
+/* Responsive adjustments for code block gutter width */
+@media (max-width: 768px) {
+    #articleContent figure.highlight { 
+        --gutter-w: 2.0rem; 
+    }
+}
+@media (max-width: 480px) {
+    #articleContent figure.highlight { 
+        --gutter-w: 1.6rem; 
+    }
+}
+#articleContent figure.highlight td.gutter {
+    width: var(--gutter-w) !important;
+    padding: 1rem 0.4rem;
+    text-align: center;
+    background: rgba(148, 163, 184, 0.18);
+    color: #64748b;
+    user-select: none;
+}
+
+#articleContent figure.highlight td.code {
+    padding: 1.25rem 1.6rem;
+    width: calc(100% - var(--gutter-w)) !important;
+}
+
+#articleContent pre code,
+#articleContent figure.highlight code {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: pre;
+}
+
+#articleContent figure.highlight span,
+#articleContent pre span {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+#articleContent :not(pre) > code {
+    display: inline-block;
+    margin: 0 0.12rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.35rem;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: rgba(15, 23, 42, 0.06);
+    color: #1f2937;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', Consolas, 'Courier New', monospace;
+    font-size: 0.92rem;
+    white-space: nowrap;
+}
+
+#articleContent pre::-webkit-scrollbar,
+#articleContent figure.highlight::-webkit-scrollbar {
+    height: 8px;
+}
+
+#articleContent pre::-webkit-scrollbar-thumb,
+#articleContent figure.highlight::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.2);
+}
+
+#articleContent pre::-webkit-scrollbar-thumb:hover,
+#articleContent figure.highlight::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 23, 42, 0.33);
+}
+
+/* 仅在行号区域隐藏装饰与功能按钮 */
+#articleContent figure.highlight td.gutter .code-area::after,
+#articleContent figure.highlight td.gutter .code-area .code_copy,
+#articleContent figure.highlight td.gutter .code-area .codecopy_notice,
+#articleContent figure.highlight td.gutter .code-area .code-expand {
+    display: none !important;
+}
+
+#articleContent figure.highlight td.gutter .code_lang {
+    display: none !important;
+}
+
+/* 降低代码区域 pre 的字号 */
+#articleContent figure.highlight td.code pre,
+#articleContent figure.highlight td.code code {
+    font-size: 0.90rem;
+}
+
+#articleContent figure.highlight td.gutter pre,
+#articleContent figure.highlight td.code pre {
+    margin: 0;
+    line-height: 1.65 !important;
+}
+#articleContent figure.highlight td.gutter pre {
+    padding: 2rem 0 1rem 0 !important;
+}
+#articleContent figure.highlight td.code pre {
+    padding-top: 2rem !important;
+}
+
+#articleContent pre::-webkit-scrollbar-thumb:hover,
+#articleContent figure.highlight::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 23, 42, 0.33);
+}
+
+/* 仅在行号区域隐藏装饰与功能按钮 */
+#articleContent figure.highlight td.gutter .code-area::after,
+#articleContent figure.highlight td.gutter .code-area .code_copy,
+#articleContent figure.highlight td.gutter .code-area .codecopy_notice,
+#articleContent figure.highlight td.gutter .code-area .code-expand {
+    display: none !important;
+}
+
+#articleContent figure.highlight td.gutter .code_lang {
+    display: none !important;
+}
+
+/* 降低代码区域 pre 的字号 */
+#articleContent figure.highlight td.code pre,
+#articleContent figure.highlight td.code code {
+    font-size: 0.90rem;
+}
+
+#toc-aside {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#toc-aside.expanded {
+    display: flex !important;
+}
+
+#toc-aside .toc-widget {
+    margin-left: auto;
+    width: 360px;
+    min-width: 360px;
+}
+
+.toc-widget.toc-fixed {
+    position: fixed !important;
+    top: 96px;
+    right: max(2vw, 28px);
+    left: auto !important;
+    z-index: 900;
+}
